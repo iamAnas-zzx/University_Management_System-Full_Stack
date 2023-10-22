@@ -1,0 +1,457 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+}
+
+a {
+    color: #e03a3c;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e76668;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+:root {
+    --shadow-color: 0deg 100% 29%;
+    --shadow-elevation-low:
+        0.5px 0.6px 1px hsl(var(--shadow-color) / 0.21),
+        0.9px 1.1px 1.8px -0.7px hsl(var(--shadow-color) / 0.3),
+        2.1px 2.5px 4.2px -1.5px hsl(var(--shadow-color) / 0.39);
+    --shadow-elevation-medium:
+        0.5px 0.6px 1px hsl(var(--shadow-color) / 0.22),
+        2px 2.5px 4.1px -0.5px hsl(var(--shadow-color) / 0.29),
+        4.6px 5.6px 9.2px -1px hsl(var(--shadow-color) / 0.36),
+        10.4px 12.7px 20.9px -1.5px hsl(var(--shadow-color) / 0.43);
+    --shadow-elevation-high:
+        0.5px 0.6px 1px hsl(var(--shadow-color) / 0.2),
+        4px 4.9px 8.1px -0.2px hsl(var(--shadow-color) / 0.23),
+        7.2px 8.8px 14.5px -0.4px hsl(var(--shadow-color) / 0.27),
+        11.2px 13.7px 22.6px -0.6px hsl(var(--shadow-color) / 0.3),
+        16.7px 20.5px 33.7px -0.9px hsl(var(--shadow-color) / 0.34),
+        24.7px 30.3px 49.8px -1.1px hsl(var(--shadow-color) / 0.37),
+        36.2px 44.3px 72.9px -1.3px hsl(var(--shadow-color) / 0.4),
+        51.9px 63.5px 104.6px -1.5px hsl(var(--shadow-color) / 0.44);
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+/* #header {
+    background: #000000;
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 20px 0;
+}
+ 
+#header.header-scrolled {
+    padding: 12px 0;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+} */
+
+/*
+#header .logo {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+    color: #111111;
+}
+
+#header .logo a span {
+    color: #e03a3c;
+}
+
+#header .logo img {
+    max-height: 40px;
+} */
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.navbar {
+    transition: all 0.3s;
+    padding: 15px 50px;
+}
+
+.navbar-scrolled {
+    padding: 10px 50px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar img {
+    height: 40px;
+    width: 40px;
+}
+
+#head {
+    font-size: 30px;
+    font-weight: 600;
+    color: #e03a3c;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-link a {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.nav-link a {
+    color: #111111;
+}
+
+.nav-link a:hover {
+    color: #e76668;
+    text-decoration: none;
+}
+.nav-link .active{
+    color: #e76668;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("/img/hero-bg.jpg") top center no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 82px;
+}
+
+/* #hero:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+} */
+/* #hero::after{
+    background: rgba(0, 0, 0, 0.1);
+} */
+
+#hero h1{
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#hero h2 {
+    color: #fff;
+    margin: 10px 0 0 0;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    #hero {
+        text-align: center;
+        padding-top: 58px;
+    }
+
+    #hero h1 {
+        font-size: 28px;
+    }
+
+    #hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media (max-height: 500px) {
+    #hero {
+        height: 120vh;
+    }
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+#about {
+    background-color: #111111;
+    overflow: hidden;
+    position: relative;
+    transform: skew(0deg, -3deg) translateY(60px);
+    margin-bottom: 180px;
+}
+
+#about .container {
+    padding: 50px 50px;
+    transform: skew(0deg, 3deg);
+}
+
+.about .content {
+    padding: 30px 30px 30px 0;
+    color: white;
+}
+
+.about .content h3 {
+    font-weight: 700;
+    font-size: 34px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.about .content p {
+    margin-bottom: 30px;
+}
+
+.about .icon-boxes .icon-box {
+    margin-top: 30px;
+}
+
+.about .icon-boxes .icon-box i {
+    font-size: 40px;
+    color: #e03a3c;
+    margin-bottom: 10px;
+}
+
+.about .icon-boxes .icon-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: white;
+}
+
+.about .icon-boxes .icon-box p {
+    font-size: 15px;
+    color: #848484;
+}
+
+@media (max-width: 1200px) {
+    .about .content {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        text-align: center;
+    }
+}
+
+/*--------------------------------------------------------------
+# Tabs
+--------------------------------------------------------------*/
+.tabs {
+    margin-top: 100px;
+}
+
+.tabs .nav-tabs {
+    border: 0 ;
+}
+
+.tabs .nav-link {
+    border: 1px solid #b9b9b9;
+    padding: 15px;
+    transition: 0.3s;
+    color: #111111;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+} 
+
+/* .tabs .nav-link i {
+    padding-right: 15px;
+    font-size: 48px;
+} */
+
+.tabs .nav-link h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+} 
+
+.tabs .nav-link :hover {
+    color: #e03a3c;
+}
+
+.tabs .nav-link.active {
+    background: #e03a3c;
+    color: #fff;
+    border-color: #e03a3c;
+}
+
+@media (max-width: 768px) {
+    .tabs .nav-link i {
+        padding: 0;
+        line-height: 1;
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 575px) {
+    .tabs .nav-link {
+        padding: 15px;
+    }
+
+    .tabs .nav-link i {
+        font-size: 24px;
+    }
+}
+
+.tabs .tab-content {
+    margin-top: 30px;
+}
+
+.tabs .tab-pane h3 {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.tabs .tab-pane ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tabs .tab-pane ul li {
+    padding-bottom: 10px;
+}
+
+.tabs .tab-pane ul i {
+    font-size: 20px;
+    padding-right: 4px;
+    color: #e03a3c;
+}
+
+.tabs .tab-pane p{
+    color:#646464;
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+#services {
+    background-color: #111111;
+    overflow: hidden;
+    position: relative;
+    transform: skew(0deg, -3deg);
+    margin-bottom: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#services .container-fluid {
+    transform: skew(0deg, 3deg);
+}
+
+.services .icon-box {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    background: #252525;
+    transition: 0.3s;
+}
+
+.services h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 40px;
+    padding-bottom: 5px;
+}
+
+.services .icon-box:hover {
+    background: #646464;
+}
+
+.services .icon-box h4 {
+    margin-left: 70px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+
+/*--------------------------------------------------------------
+# Login 
+--------------------------------------------------------------*/
+.login button {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.login {
+    margin-bottom: 50px;
+}
+
+.login h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #111111;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+    background-color: #111111;
+}
+#footer h3,p ,h4 {
+    color: white;
+}
+#footer .copyright{
+    color: #e03a3c;
+}
+
+/*--------------------------------------------------------------
+# Admin Login
+--------------------------------------------------------------*/
+#adminlogin .section-title{
+    padding-top: 82px;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Teacher Login
+--------------------------------------------------------------*/
+#teacherlogin .section-title{
+    padding-top: 82px;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Student Login
+--------------------------------------------------------------*/
+#studentlogin .section-title{
+    padding-top: 82px;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Student Dashboard
+--------------------------------------------------------------*/
+#studentdash .section-title{
+    padding-top: 82px;
+    text-align: center;
+}

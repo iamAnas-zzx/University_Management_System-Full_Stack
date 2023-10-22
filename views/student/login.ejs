@@ -1,0 +1,46 @@
+<%- include('../partials/head') %>
+  <!-- ======= Header ======= -->
+  <%- include('../partials/header-loginpage')  %>
+  <!-- End Header -->
+
+  <main id="main">
+    <section id="studentlogin" class="login">
+      <div class="container">
+        <div class="section-title">
+          <% if (messages.length > 0) { %>
+            <div class="alert alert-danger">
+              <%= messages %>
+            </div>
+            <% } %>
+          <h2>STUDENT LOGIN</h2>
+          <h1>Madan Mohan Malaviya University of Technology, Gorakhpur</h1>
+        </div>
+      </div>
+      <div class="container-fluid h-custom vh-80">
+        <div class="row d-flex justify-content-center align-items-center h-100 pt-5">
+          <div class="col-md-9 col-lg-6 col-xl-5 text-center">
+            <img src="/img/R.jfif" class="img-fluid" alt="Sample image">
+          </div>
+          <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <form action="/student/dashboard" method="post">
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="email" name="loginID" id="form3Example3" class="form-control form-control-lg" placeholder="Enter email" />
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-3">
+                <input type="password" name="password" id="form3Example4" class="form-control form-control-lg"
+                  placeholder="Enter password" />
+              </div>
+
+              <div class="text-center text-lg-start mt-4 pt-2">
+                <button type="submit" class="btn btn-primary btn-lg">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <%- include('../partials/footer-loginpage')  %>
