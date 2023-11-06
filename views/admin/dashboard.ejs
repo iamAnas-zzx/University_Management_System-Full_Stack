@@ -85,6 +85,11 @@
         </nav>
     </header>
     <section id="admin-area">
+        <% if (messages.length > 0) { %>
+            <div  class="alert alert-danger"  >
+              <%= messages %>
+            </div>
+            <% } %>
         <div class="container-xl ">
             <div class="row " style="height: 100%;  background: #1d2630; border-radius: 20px;">
                 <div id="col-one" class="col-lg-2 col-md-3 col-4 pt-2">
